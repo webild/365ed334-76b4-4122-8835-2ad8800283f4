@@ -1,6 +1,6 @@
 "use client";
 import { SimpleHero } from '@/components/sections/layouts/hero/SimpleHero';
-import SimpleAbout from '@/components/sections/layouts/about/SimpleAbout';
+import MinimalAbout from '@/components/sections/layouts/about/MinimalAbout';
 import SimpleKPIBento from '@/components/bento/SimpleKPIBento';
 import SimpleStepsBento from '@/components/bento/SimpleStepsBento';
 import SimpleFooter from '@/components/sections/layouts/footer/SimpleFooter';
@@ -37,10 +37,10 @@ export default function Home() {
       textAnimation: 'slide'
     }}>
       <section id="hero" className="bg-gradient-to-r from-blue-50 to-white p-10">
-        <SimpleHero title="Welcome to Our Website" subtitle="We provide the best services" primaryButtonText="Get Started" secondaryButtonText="Learn More" />
+        <SimpleHero title="Welcome to Our Website" description="We provide the best services" primaryButtonText="Get Started" secondaryButtonText="Learn More" />
       </section>
       <section id="about" className="bg-white p-10">
-        <SimpleAbout description="We are a leading company in our field." />
+        <MinimalAbout description="We are a leading company in our field." />
       </section>
       <section id="services" className="bg-soft-noise p-10">
         <SimpleKPIBento items={mockServices} className="custom-class" />
