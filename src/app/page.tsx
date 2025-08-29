@@ -1,5 +1,5 @@
 "use client";
-import { SimpleHero } from '@/components/sections/layouts/hero/SimpleHero';
+import SimpleHero from '@/components/sections/layouts/hero/SimpleHero';
 import MinimalAbout from '@/components/sections/layouts/about/MinimalAbout';
 import SimpleKPIBento from '@/components/bento/SimpleKPIBento';
 import SimpleStepsBento from '@/components/bento/SimpleStepsBento';
