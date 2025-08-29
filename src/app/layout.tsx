@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Inter_Tight, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import { Inter_Tight } from "next/font/google";
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
+import "./globals.css";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
@@ -9,15 +9,9 @@ const interTight = Inter_Tight({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
 export const metadata: Metadata = {
   title: "Generic One-Page Website",
-  description: "A clear, scrollable landing page presenting offerings and essential info.",
+  description: "Deliver a clear, scrollable landing that presents the offering and drives a primary contact/CTA.",
 };
 
 export default function RootLayout({
@@ -27,14 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${interTight.variable} ${playfairDisplay.variable} antialiased`} 
-        style={{ background: "linear-gradient(180deg, #f7f9fb 0%, #ffffff 100%)" }}
-      >
-        <SiteThemeProvider theme={{ styleVariant: 'funAndTrendy', colorTemplate: 1, textAnimation: 'slide' }}>
-          {children}
-        </SiteThemeProvider>
-      </body>
+      <body className={`${interTight.variable} antialiased`}>{children}</body>
     </html>
   );
 }
